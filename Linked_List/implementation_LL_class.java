@@ -48,5 +48,6 @@ public class implementation_LL_class {
      l.insertAtBeginning(0);
      l.display();
      l.size();
+        System.out.println("souptik");
     }
 }
