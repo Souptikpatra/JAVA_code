@@ -81,6 +81,24 @@ class LinkList{
         x.next = null;
         size--;
     }
+    int getMiddleNode(){
+        node temp = head;
+        int mid = (size/2)+1;
+        for (int i = 1; i <= mid-1; i++) {
+            temp = temp.next;
+        }
+        return temp.value;
+    }
+    int getMiddleNode_2pointer(){
+        node slow = head;
+        node fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next; // moves 1 step at a time
+            fast = fast.next.next; // moves 2 step at a time
+        }
+        return slow.value;
+
+    }
     void deleteNode(int index){
         if (index >= size || index < 0){
             System.err.println("index can't be reach");
@@ -152,16 +170,13 @@ class LinkList{
 public class implementation_LL_class {
     public static void main(String[] args) {
         LinkList l = new LinkList();
-        l.insertAtEnd(10);
-        l.insertAtEnd(20);
-        l.insertAtEnd(30);
-        l.insertAtEnd(40);
-        l.insertAtEnd(50);
+        for (int i = 10; i <= 60; i += 10) {
+            l.insertAtEnd(i);
+        }
         l.display();
         l.size();
-        l.deleteNode(4);
-        l.display();
-        l.size();
+        System.out.println(l.getMiddleNode_2pointer());
+
 
     }
 }
