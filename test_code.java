@@ -55,5 +55,6 @@ class test_code {
     public static void main(String[] args) {
         MorseConv m = new MorseConv();
         m.engToMorse("Souptik");
+        System.out.println("souptik");
     }
 }

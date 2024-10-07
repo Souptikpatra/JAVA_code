@@ -12,7 +12,7 @@ class Solution1 {
         return root;
     }
 }
-public class LT_invertBinaryTree {
+public class LT_226_invertBinaryTree {
     public static void displayTree(TreeNode root){
         if (root == null) return;
         System.out.print(root.val+", ");
