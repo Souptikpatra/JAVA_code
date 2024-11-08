@@ -1,13 +1,4 @@
 package Binary_Tree;
-class TreeNode{
-    TreeNode left;
-    int val;
-    TreeNode right;
-     TreeNode(int val){
-        this.val = val;
-    }
-
-}
 public class BT_basics {
     public static void main(String[] args) {
         TreeNode a = new TreeNode(1); // root node
